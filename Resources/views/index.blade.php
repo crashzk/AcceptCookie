@@ -1,0 +1,1 @@
+@yoyo('accept-cookie')
