@@ -7,9 +7,9 @@ use Flute\Modules\AcceptCookie\Components\AcceptCookieComponent;
 
 class AcceptCookieProvider extends ModuleServiceProvider
 {
-    public array $extensions = [];
-
     public const ACCEPT_COOKIE_KEY = 'accept-cookie';
+
+    public array $extensions = [];
 
     public function boot(\DI\Container $container): void
     {

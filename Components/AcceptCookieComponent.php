@@ -21,7 +21,12 @@ class AcceptCookieComponent extends FluteComponent
     {
         $this->isAccepted = $accepted;
 
-        cookie()->set(AcceptCookieProvider::ACCEPT_COOKIE_KEY, $accepted, carbon()->addYear()->timestamp, sameSite: 'Lax');
+        cookie()->set(
+            AcceptCookieProvider::ACCEPT_COOKIE_KEY,
+            $accepted,
+            carbon()->addYear()->timestamp,
+            sameSite: 'Lax',
+        );
 
         $this->skipRenderWithStatus(204);
     }
@@ -34,11 +39,8 @@ class AcceptCookieComponent extends FluteComponent
 
         $this->hasPrivacyPolicy = Page::findOne(['route' => '/privacy']) !== null;
 
-        return $this->view(
-            'accept-cookie::components.cookie',
-            [
-                'hasPrivacyPolicy' => $this->hasPrivacyPolicy,
-            ]
-        );
+        return $this->view('accept-cookie::components.cookie', [
+            'hasPrivacyPolicy' => $this->hasPrivacyPolicy,
+        ]);
     }
 }

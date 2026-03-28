@@ -1,6 +1,6 @@
 {
     "name": "AcceptCookie",
-    "version": "1.0.3",
+    "version": "2.0.0",
     "description": "Accept cookie widget module",
     "authors": ["Flames"],
     "providers": ["Flute\\Modules\\AcceptCookie\\Providers\\AcceptCookieProvider"],
